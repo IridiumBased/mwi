@@ -36,7 +36,7 @@ class UserAccount extends Eloquent {
             $user_account->Created      = time();
             $user_account->UserLevel    = 0;
             $user_account->UserFlags    = 0;
-            $user_account->UserTitle    = '';
+            $user_account->UserTitle    = 'Local User';
             
             $user_account->save();
         }
