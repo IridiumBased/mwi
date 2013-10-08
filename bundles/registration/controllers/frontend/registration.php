@@ -82,6 +82,7 @@ class Registration_Frontend_Registration_Controller extends Public_Controller {
             $new_user->hash              = $password['hash'];
             $new_user->salt              = $password['salt'];
             $new_user->password          = Hash::make(Input::get('password'));
+			//$new_user->user_title		 = 'Local User';
             $new_user->save();
 
             Event::fire('registration.user_signup', array($new_user));
